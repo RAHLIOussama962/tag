@@ -21,10 +21,10 @@ inline Matrix<N> normalize( Matrix<N> M ){
     return M;
 }
 
-typedef tr1::array<pair<Vector<3>, Vector<3> >,5 > InputData;
+typedef std::array<pair<Vector<3>, Vector<3> >,5 > InputData;
 
 void test2Dfiledata(){
-    tr1::array<pair<Vector<3>, Vector<3> >,5 > data;
+    std::array<pair<Vector<3>, Vector<3> >,5 > data;
     for(int i = 0; i < 5; ++i) {
         cin >> data[i].first.slice<0,2>().ref() >> data[i].second.slice<0,2>().ref();
        data[i].first[2] = 1;
